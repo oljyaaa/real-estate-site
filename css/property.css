@@ -1,0 +1,27 @@
+/* Hero Property */
+.prop-hero { position: relative; margin-top: 30px; }
+.prop-hero-bg {
+    background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9') center/cover;
+    height: 350px; border-radius: var(--radius);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    color: white; text-align: center; padding: 20px;
+}
+.prop-hero-bg h1 { font-size: 2.5rem; margin-bottom: 10px; }
+
+/* Search Bar */
+.search-bar {
+    position: absolute; bottom: -30px; left: 50%; transform: translateX(-50%);
+    background: white; padding: 15px 30px; border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); display: flex; align-items: center; gap: 20px; width: 80%;
+}
+.search-item { flex: 1; border-right: 1px solid var(--border-color); display: flex; flex-direction: column; }
+.search-item label { font-size: 0.8rem; color: var(--text-muted); }
+.search-item select { border: none; outline: none; font-weight: 500; appearance: none; cursor: pointer; }
+.icon-btn { background: none; border: none; font-size: 1.2rem; cursor: pointer; padding: 0 15px; }
+
+/* Grid */
+.prop-grid-section { margin-top: 80px; }
+.property-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+
+@media (max-width: 992px) { .property-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 768px) { .property-grid { grid-template-columns: 1fr; } .search-bar { flex-direction: column; position: static; transform: none; width: 100%; margin-top: 20px; } .search-item { border: none; border-bottom: 1px solid #eee; padding: 10px 0; } }
